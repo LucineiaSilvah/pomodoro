@@ -11,25 +11,29 @@ body{
   justify-content: center;
   gap: 2rem;
 }
-.data-timer,.data-pause{
-  width: 500px;
+.data-timer,
+.data-pause {
+  width: 90%; /* Ajuste para ocupar a maior parte da tela em telas menores */
+  max-width: 500px; /* Limita o tamanho máximo em telas maiores */
   background: #b4a9a9;
-  display: flex; 
+  display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  height: 300px; /* Altura reduzida para telas menores */
+  margin: 1rem 0;
 }
-.data-timer{
-  background: url('https://cdn.pixabay.com/photo/2017/08/21/03/38/super-mario-2663951_640.jpg')no-repeat center;
-  height: 500px;
+.data-timer {
+  background: url('https://cdn.pixabay.com/photo/2017/08/21/03/38/super-mario-2663951_640.jpg') no-repeat center;
+  background-size: cover; /* Ajusta a imagem ao container */
   color: rgb(10, 222, 10);
 }
-.data-pause{
 
-  justify-content: start;
-  background: url('https://1.bp.blogspot.com/-xm0Ee26f3RY/X4xN4i5jCvI/AAAAAAAAB4g/z3-1-4TUVko5T_9wYHXNrc86VpAkLrxYQCLcBGAsYHQ/s900/Isle_Delfino.jpg')no-repeat right;
-  height: 500px;
-  color:#FF0307;
+.data-pause {
+  justify-content: flex-start;
+  background: url('https://1.bp.blogspot.com/-xm0Ee26f3RY/X4xN4i5jCvI/AAAAAAAAB4g/z3-1-4TUVko5T_9wYHXNrc86VpAkLrxYQCLcBGAsYHQ/s900/Isle_Delfino.jpg') no-repeat right;
+  background-size: cover;
+  color: #FF0307;
 }
 .data-pause button{
   border: 1px solid #FF0307;
@@ -45,4 +49,44 @@ button{
   border: 1px solid rgb(10, 222, 10);
   box-shadow: 2px 4px 8px black;
   color:rgb(10, 222, 10);
+}
+@media (max-width: 768px) {
+  body{
+    margin: 0 auto;
+  }
+  .container {
+    flex-direction: column; /* Empilha os elementos na vertical */
+    gap: 1rem; /* Diminui o espaço entre os elementos */
+  }
+
+  .data-timer,
+  .data-pause {
+    width: 100%; /* Ocupar toda a largura da tela */
+    height: 250px; /* Altura menor para telas pequenas */
+  }
+
+  .container span {
+    font-size: 3rem; /* Texto menor */
+  }
+
+  button {
+    padding: 0.4rem 1.5rem; /* Botão menor */
+  }
+}
+
+@media (max-width: 480px) {
+  .data-timer,
+  .data-pause {
+    height: 300px; /* Reduz ainda mais a altura em telas muito pequenas */
+    font-size: 0.9rem; /* Texto menor */
+  }
+
+  .container span {
+    font-size: 2.5rem;
+  }
+
+  button {
+    padding: 0.3rem 1rem; /* Botões compactos */
+    font-size: 0.8rem;
+  }
 }
