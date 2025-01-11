@@ -1,0 +1,48 @@
+body{
+  color: #fff;
+  height: 100vh;
+  margin: 100px auto;
+
+  text-align: center;
+}
+.container{
+  display: flex; 
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}
+.data-timer,.data-pause{
+  width: 500px;
+  background: #b4a9a9;
+  display: flex; 
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.data-timer{
+  background: url('https://cdn.pixabay.com/photo/2017/08/21/03/38/super-mario-2663951_640.jpg')no-repeat center;
+  height: 500px;
+  color: rgb(10, 222, 10);
+}
+.data-pause{
+
+  justify-content: start;
+  background: url('https://1.bp.blogspot.com/-xm0Ee26f3RY/X4xN4i5jCvI/AAAAAAAAB4g/z3-1-4TUVko5T_9wYHXNrc86VpAkLrxYQCLcBGAsYHQ/s900/Isle_Delfino.jpg')no-repeat right;
+  height: 500px;
+  color:#FF0307;
+}
+.data-pause button{
+  border: 1px solid #FF0307;
+  color:#FF0307;
+}
+.container span{
+  font-size: 6rem;
+
+}
+button{
+  padding: .5rem 2rem;
+  border-radius: .25rem;
+  border: 1px solid rgb(10, 222, 10);
+  box-shadow: 2px 4px 8px black;
+  color:rgb(10, 222, 10);
+}

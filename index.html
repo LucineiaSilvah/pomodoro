@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Pomodoro timer</title>
+  
+</head>
+<body>
+   <h1>Pomodoro Timer</h1>
+  <div class="container">
+   <div class="data-timer">
+      <h2>Foco</h2>
+      <div>
+
+         <span id="min">00</span> <span>:</span>
+         <span id="seg">00</span>
+      </div>
+      
+      <div class="btns">
+         <button type="button" class="start" onclick="start()"> start</button>
+         <button type="button" class="pause" onclick="pausar()"> pause</button>
+         <button type="button" class="continue" onclick="resume()"> continue</button>
+         <button type="button" class="reset" onclick="reset()"> reset</button>
+      </div>
+   </div>
+   <div class="data-pause">
+      <h2>Pausa</h2>
+      <div>
+
+         <span id="minP">00</span> <span>:</span>
+         <span id="segP">00</span>
+      </div>
+      
+      <div class="btns">
+         <button type="button" class="start" onclick="startDescanso()"> start</button>
+         <button type="button" class="pause" onclick="pausaDescanso()"> pause</button>
+         <button type="button" class="continue" onclick="resumeDescanso()"> continue</button>
+         <button type="button" class="reset" onclick="reset()"> reset</button>
+      </div>
+   </div>
+  </div>
+
+   <audio id="som" src="som.mp3"></audio>
+   <audio id="over" src="over.mp3"></audio>
+
+   <script src="app.js"></script>
+</body>
+</html>
