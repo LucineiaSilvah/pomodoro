@@ -40,7 +40,7 @@ dataPause.style.display = 'none'
          seg = 0;
      
       }
-      if(min === 1){
+      if(min === 25){
          som.play()
         
         dataTimer.style.display = 'none'
@@ -96,7 +96,7 @@ function startDescanso(){
          seg = 0;
          
       }
-      if(min === 1){
+      if(min === 5){
         over.play()
         pausaDescanso()
         min = 0;
